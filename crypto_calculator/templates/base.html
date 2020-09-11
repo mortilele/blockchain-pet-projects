@@ -93,7 +93,7 @@ input[type=number], select, output {
       </div>
     </div>
   </div>
-
+  <!-- ! Changelist of ethereum data ! -->
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-twothird">
@@ -142,6 +142,7 @@ input[type=number], select, output {
   <div class="w3-container">
     <div class="w3-twothird">
         <h5> Calculate my Ethereums </h5>
+        <!-- Calculates ethereum vs USD, via naming variables in form, and calculate price onInput change  -->
         <form oninput="result.value=(parseInt(ethereum.value) * parseFloat(exchange_rate.value) + ' $') ">
             <label for="ethereum_input">Your ethereum count</label>
             <input type="number" id="ethereum_input" name="ethereum" placeholder="1">
@@ -162,6 +163,7 @@ input[type=number], select, output {
     <div class="w3-row">
       <div class="w3-col m10 w3-container">
           <p>
+              <!-- autoescape has been added, because description in HTML format -->
               {% autoescape off %}
                   {{ etheriums_details.0.description.en }}.
               {% endautoescape %}
